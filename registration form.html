@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    .page-header {
+  background-color:burlywood;
+  color: white;
+  text-align: center;
+  padding: 40px 20px 30px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
+.page-header p {
+  margin-top: 10px;
+  font-size: 1.1em;
+  opacity: 0.95;
+}
+
+    body {
+      background:#333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .form-container {
+      background: #fff;
+      max-width: 700px;
+      margin: auto;
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: 500;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="date"],
+    input[type="url"],
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: #007bff;
+    }
+
+    .form-group.skills {
+      grid-column: 1 / -1;
+    }
+
+    .skills label {
+      font-weight: 500;
+      margin-right: 15px;
+    }
+
+    .skills input {
+      margin-right: 6px;
+    }
+
+    .upload {
+      grid-column: 1 / -1;
+    }
+
+    input[type="file"] {
+      border: none;
+    }
+
+    .form-group.gender {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .gender input {
+      margin-right: 5px;
+    }
+
+    .submit-button {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    button {
+      background: #007bff;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+    <header class="page-header">
+  <div class="header-content">
+    <h1>Students Developer Community</h1>
+    <p>Connect. Code. Create. Join our vibrant community of passionate student developers.</p>
+  </div>
+</header>
+
+  <div class="form-container">
+    <h2>Registration Form</h2>
+    <form>
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="year">Year</label>
+          <input type="text" id="year" required>
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="text" id="mobile" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="dept">Department</label>
+          <input type="text" id="dept" required>
+        </div>
+
+        <div class="form-group">
+          <label for="gradYear">Graduation Year</label>
+          <input type="number" id="gradYear" min="2020" max="2030" required>
+        </div>
+
+        <div class="form-group gender">
+          <label>Gender:</label>
+          <label><input type="radio" name="gender" value="male" required> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+          <label><input type="radio" name="gender" value="other"> Other</label>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" required>
+        </div>
+
+        <div class="form-group skills">
+          <label>Skills</label>
+          <label><input type="checkbox" name="skills" value="HTML"> HTML</label>
+          <label><input type="checkbox" name="skills" value="CSS"> CSS</label>
+          <label><input type="checkbox" name="skills" value="JavaScript"> JavaScript</label>
+          <label><input type="checkbox" name="skills" value="Python"> Python</label>
+          <label><input type="checkbox" name="skills" value="Java"> Java</label>
+        </div>
+
+        <div class="form-group">
+          <label for="github">GitHub Link</label>
+          <input type="url" id="github" placeholder="https://github.com/yourprofile">
+        </div>
+
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Link</label>
+          <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+        </div>
+
+        <div class="form-group upload">
+          <label for="photo">Upload Photograph</label>
+          <input type="file" id="photo" accept="image/*" required>
+        </div>
+
+        <div class="submit-button">
+          <button type="submit">Register</button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
