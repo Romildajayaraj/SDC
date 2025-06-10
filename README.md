@@ -1,1 +1,1 @@
-# SDC
+#Students developer community
